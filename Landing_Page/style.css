@@ -1,0 +1,16 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #302a46;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;
+}
+
+.nav-bar img {
+    height: 100%;
+    width: 100%;
+}
