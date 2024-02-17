@@ -17,16 +17,35 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     text-decoration: none;
 }
 
-.container{
+.main{
+    position: absolute;
     width: 100%;
     height: 100vh;
+    background-image: url(./Assets/Images/background-hero.png);
+}
+
+.container{
+    width: 100%;
+    height: 95vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.logo_img{
+    height: 3vh;
+    align-self: flex-start;
+    justify-self: flex-start;
+    padding: 5px;
+}
+
+.logo_img img{
+    width: 200px;
 }
 
 .hide{
-    /* display: none; */
     opacity: 0;
     z-index: -1;
 }
@@ -37,12 +56,14 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
 }
 
 .mainBox{
+    background-color: white;
     position: relative;
     width: 800px;
     height: 600px;
     border-radius: 10px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-    /* background-color: #c5c6c9; */
+
+    transition: width 0.5s;
 }
 
 .organiser{
@@ -62,7 +83,7 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
 .purpleImage{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px 0px 0px 10px;
 }
 
@@ -76,11 +97,11 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     justify-content: center;
     align-items: center;
     border-radius: 0px 10px 10px 0px;
-    box-shadow: 0 45px 45px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 45px 45px rgba(0, 0, 0, 0.25); */
 }
 
 .input{
-    background-color: white;
+    /* background-color: white; */
     width: 350px;
     padding: 25px;
 }
@@ -135,8 +156,6 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     background: linear-gradient(to right, #8064b3, #41346a);
     color: white;
     transition: all 100ms ease-in-out;
-    /* font-size: 13px; */
-    /* font-size: 20px; */
 }
 
 .submit:hover{
@@ -174,14 +193,27 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
 
 .socDefault img{
     width: 30px;
+    margin-bottom: 0px;
+    transition: all 100ms;
 
+}
+.inputBox:focus ~ .underline:after{
+    transform: scaleX(1);
+}
+
+.socDefault img:hover{
+    width: 40px;
+    margin-bottom: 10px;
 }
 
 
 
+@media(max-width: 840px){
+    .img{
+        display: none;
+    }
 
-
-
-.inputBox:focus ~ .underline:after{
-    transform: scaleX(1);
+    .mainBox{
+        width: 500px;
+    }
 }
