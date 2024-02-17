@@ -1,0 +1,159 @@
+/* 
+#41346a => Dark Purple
+#745aa4 => Light Purple
+#c5c6c9 => grey 
+
+Google image = <img class="social-btn-icon" alt="Login with Google" src="https://hrcdn.net/fcore/assets/google-colored-20b8216731.svg">
+Github image = <img class="social-btn-icon" alt="Login with Github" src="https://hrcdn.net/fcore/assets/github-colored-1db995054b.svg">
+LinkedIn image = <img class="social-btn-icon" alt="Login with LinkedIn" src="https://hrcdn.net/fcore/assets/linkedin-colored-1db195795c.svg">
+facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="https://hrcdn.net/fcore/assets/facebook-colored-af4249157d.svg">
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sand-serif';
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    /* display: none; */
+    opacity: 0;
+    z-index: -1;
+}
+
+.show{
+    opacity: 100%;
+    z-index: 1;
+}
+
+.mainBox{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #c5c6c9;
+}
+
+.organiser{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    background: linear-gradient(#8064b3, #41346a);
+    /* background-color: #41346a; */
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+.form{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    background-color: white;
+    width: 350px;
+    padding: 25px;
+
+}
+
+.default{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+    padding: 5px;
+}
+
+.inputBox{
+    width: 336.5px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.underline:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 350px;
+    background: rgb(226, 226, 226);;
+}
+
+.underline:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 350px;
+    background: linear-gradient(to right, #8064b3, #41346a);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s;
+}
+
+.submit{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.forgot{
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+.forgot p{
+    position: absolute;
+    right: 0;
+    color: #930eb8;
+}
+
+
+.other{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.soc{
+    background-color: #ffffff;
+    width: 340px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.socDefault img{
+    width: 30px;
+
+}
+
+
+
+
+
+
+.inputBox:focus ~ .underline:after{
+    transform: scaleX(1);
+}
