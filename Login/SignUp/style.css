@@ -9,22 +9,6 @@ LinkedIn image = <img class="social-btn-icon" alt="Login with LinkedIn" src="htt
 facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="https://hrcdn.net/fcore/assets/facebook-colored-af4249157d.svg">
 */
 
-/* 
-For Student:
-    Name
-    Email
-    Phone No.
-    Password
-
-For Org:
-    Name 
-    Email
-    Phone No.
-    Organisation
-    Password
-*/
-
-
 *{
     margin: 0;
     padding: 0;
@@ -37,11 +21,12 @@ For Org:
     width: 100%;
     height: 100vh;
     background-image: url(../Assets/Images/background-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
     width: 100%;
-    /* height: 95vh; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -63,8 +48,7 @@ For Org:
     background-color: white;
     position: relative;
     width: 800px;
-    /* max-width: 100rem; */
-    height: 600px;
+    height: 700px;
     margin: 50px 0px;
     border-radius: 10px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
@@ -80,8 +64,8 @@ For Org:
 
 .img{
     position: absolute;
-    width: 300px;
-    height: 600px;
+    width: 310px;
+    height: 700px;
     background: linear-gradient(#8064b3, #41346a);
     border-radius: 10px 0px 0px 10px;
 }
@@ -97,19 +81,26 @@ For Org:
 .form{
     position: absolute;
     width: 500px;
-    height: 600px;
+    height: 700px;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0px 10px 10px 0px;
-    /* box-shadow: 0 45px 45px rgba(0, 0, 0, 0.25); */
 }
 
 .input{
-    /* background-color: white; */
     width: 350px;
     padding: 25px;
+}
+
+.signUpLabel{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #41346a;;
+    text-align: center;
+    text-decoration: underline;
 }
 
 .default{
@@ -125,6 +116,7 @@ For Org:
     padding: 5px;
     border: none;
     outline: none;
+    background: transparent;
 }
 
 .line{
@@ -132,7 +124,7 @@ For Org:
     width: 350px;
     background: rgb(226, 226, 226);
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .underline:before{
@@ -154,6 +146,10 @@ For Org:
     transition: 0.3s;
 }
 
+.inputBox:focus ~ .underline:after{
+    transform: scaleX(1);
+}
+
 .submit{
     margin-bottom: 15px;
     margin-top: 20px;
@@ -161,14 +157,14 @@ For Org:
     height: 50px;
     border: none;
     outline: none;
-    background: linear-gradient(to right, #8064b3, #41346a);
+    background: linear-gradient(to left, #8064b3, #41346a);
     color: white;
-    transition: all 100ms ease-in-out;
+    transition: all 80ms ease-in-out;
 }
 
 .submit:hover{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .forgot{
@@ -207,9 +203,7 @@ For Org:
     transition: all 100ms;
 
 }
-.inputBox:focus ~ .underline:after{
-    transform: scaleX(1);
-}
+
 
 .socDefault img:hover{
     width: 40px;
@@ -225,5 +219,15 @@ For Org:
 
     .mainBox{
         width: 500px;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
+
+@media(max-width: 550px){
+    .mainBox{
+        width: 90%;
     }
 }

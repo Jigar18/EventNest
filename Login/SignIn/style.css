@@ -22,6 +22,8 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     width: 100%;
     height: 100vh;
     background-image: url(../Assets/Images/background-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
@@ -110,6 +112,7 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     padding: 5px;
     border: none;
     outline: none;
+    background: transparent;
 }
 
 .line{
@@ -147,14 +150,14 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     background: linear-gradient(to right, #8064b3, #41346a);
     color: white;
     transition: all 100ms ease-in-out;
-    font-size: 15px;
+    /* font-size: 15px; */
     /* word-spacing: 20px; */
     letter-spacing: 1px;
 }
 
 .submit:hover{
     cursor: pointer;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .forgot{
@@ -205,7 +208,6 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
 }
 
 
-
 @media(max-width: 840px){
     .img{
         display: none;
@@ -213,5 +215,11 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
 
     .mainBox{
         width: 500px;
+    }
+}
+
+@media(max-width: 550px){
+    .mainBox{
+        width: 90%;
     }
 }
