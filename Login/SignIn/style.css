@@ -147,17 +147,19 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     background: linear-gradient(to right, #8064b3, #41346a);
     color: white;
     transition: all 100ms ease-in-out;
+    font-size: 15px;
+    /* word-spacing: 20px; */
+    letter-spacing: 1px;
 }
 
 .submit:hover{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .forgot{
     position: relative;
     margin-bottom: 50px;
-
 }
 
 .forgot p{
