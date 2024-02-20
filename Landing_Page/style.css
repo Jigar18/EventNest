@@ -12,6 +12,16 @@ body {
     background-color: #1c172b;
 }
 
+::selection {
+    background-color: #b259bc;
+    color: #fff;
+}
+
+::-moz-selection {
+    background-color: #b259bc;
+    color: #fff;
+}
+
 .header {
     height: 7vh;
     width: 100vw;

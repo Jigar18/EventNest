@@ -25,6 +25,16 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
     background-size: cover;
 }
 
+::selection {
+    background-color: #b259bc;
+    color: #fff;
+}
+
+::-moz-selection {
+    background-color: #b259bc;
+    color: #fff;
+}
+
 .container{
     width: 100%;
     position: relative;
