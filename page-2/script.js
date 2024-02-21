@@ -5,6 +5,7 @@ const option2 = document.querySelector(".organization__option");
 const student = document.querySelector(".img__student");
 const organization = document.querySelector(".img__organization");
 const select = document.querySelector(".img__select");
+const submit = document.querySelector(".buttons a");
 
 options.addEventListener("click", function(e) {
     const clicked = e.target.closest(".option");
@@ -19,10 +20,12 @@ options.addEventListener("click", function(e) {
     if (clicked.classList.contains("student__option")) {
         student.style.opacity = 0.9;
         option1.classList.toggle("option-active");
+        submit.setAttribute("href", "../Login/SignUp/indexStu.html");
     }
     else if (clicked.classList.contains("organization__option")) {
         organization.style.opacity = 0.9;
         option2.classList.toggle("option-active");
+        submit.setAttribute("href", "../Login/SignUp/indexOrg.html");
     }
 });
 
