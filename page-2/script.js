@@ -5,6 +5,7 @@ const option2 = document.querySelector(".organization__option");
 const student = document.querySelector(".img__student");
 const organization = document.querySelector(".img__organization");
 const select = document.querySelector(".img__select");
+const conti = document.querySelector("#click");
 
 options.addEventListener("click", function(e) {
     const clicked = e.target.closest(".option");
@@ -25,4 +26,14 @@ options.addEventListener("click", function(e) {
         option2.classList.toggle("option-active");
     }
 });
+
+conti.addEventListener('click', signUpLoader);
+
+option1.addEventListener('click', function () {
+    
+})
+
+function signUpLoader(){
+
+}
 
