@@ -215,6 +215,7 @@ facebook image = <img class="social-btn-icon" alt="Login with Facebook" src="htt
 .socDefault img:hover{
     width: 40px;
     margin-bottom: 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
 
