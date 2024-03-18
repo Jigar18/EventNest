@@ -6,6 +6,7 @@ const student = document.querySelector(".img__student");
 const organization = document.querySelector(".img__organization");
 const select = document.querySelector(".img__select");
 const submit = document.querySelector(".buttons a");
+const back = document.querySelector('.bx-arrow-back');
 
 options.addEventListener("click", function(e) {
     const clicked = e.target.closest(".option");
@@ -28,4 +29,3 @@ options.addEventListener("click", function(e) {
         submit.setAttribute("href", "../Login/SignUp/indexOrg.html");
     }
 });
-
