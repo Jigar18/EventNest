@@ -21,12 +21,12 @@ options.addEventListener("click", function(e) {
     if (clicked.classList.contains("student__option")) {
         student.style.opacity = 0.9;
         option1.classList.toggle("option-active");
-        submit.setAttribute("href", "../Login/SignUp/indexStu.html");
+        submit.setAttribute("href", "../Forms/SignUp/indexStu.html");
     }
     else if (clicked.classList.contains("organization__option")) {
         organization.style.opacity = 0.9;
         option2.classList.toggle("option-active");
-        submit.setAttribute("href", "../Login/SignUp/indexOrg.html");
+        submit.setAttribute("href", "../Forms/SignUp/indexOrg.html");
     }
 });
 
