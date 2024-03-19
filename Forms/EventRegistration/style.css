@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', 'sand-serif';
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-image: url(../Assets/Images/container.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo{
+    align-self: flex-start;
+}
+
+.imgLogo{
+    width: 250px;
+    margin-top: 20px;
+}
+.main{
+    width: 1160px;
+    /* background-color: rgb(138, 138, 138); */
+    box-shadow: 0 45px 45px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.mainContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.form{
+    width: 100%;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formHeading{
+    margin-bottom: 20px;
+}
+
+form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputDiv{
+    position: relative;
+    width: 90%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.inputDivLabel{
+    font-size: 15px;
+    color: rgb(143, 142, 143);
+
+}
+
+.choiceLabel{
+    margin-bottom: 20px;
+}
+
+.inputbox{
+    width: 100%;
+    height: 35px;
+    padding: 2px 20px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 20px;
+}
+
+.underline:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: rgb(226, 226, 226);
+}
+
+.underline:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #8064b3, #41346a);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s;
+}
+
+.inputbox:focus ~ .underline:after{
+    transform: scaleX(1);
+}
+
+
+.optionsDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* When the option is selected */
+.optionActive{
+    border: 2px solid rgb(63, 62, 62);
+}
+
+.professionOptions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.professionDiv{
+    margin-bottom: 50px;
+}
+
+.Option{
+    width: 150px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(209, 208, 208);
+}
+
+.genOpt{
+    text-align: center;
+}
+
+.btn--submit{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to left, #8064b3, #41346a);
+    color: white;
+    font-size: 15px;
+    transition: all ease-in-out 200ms;
+}
+
+.submitDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--submit:hover{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media(max-width: 1250px){
+    .main{
+        width: 90%;
+    }
+}
+
+@media(max-width: 850px){
+    .professionOptions{
+        flex-direction: column;
+        width: 100%;
+    }
+    .Option{
+        width: 100%;
+    }
+}
