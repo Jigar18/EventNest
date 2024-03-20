@@ -7,6 +7,7 @@ const organization = document.querySelector(".img__organization");
 const select = document.querySelector(".img__select");
 const conti = document.querySelector("#click");
 const submit = document.querySelector(".buttons a");
+const back = document.querySelector('.bx-arrow-back');
 
 options.addEventListener("click", function(e) {
     const clicked = e.target.closest(".option");
@@ -39,4 +40,5 @@ option1.addEventListener('click', function () {
 function signUpLoader(){
 
 }
+
 
