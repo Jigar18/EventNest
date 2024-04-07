@@ -58,6 +58,7 @@
                                 <div class="default">
                                     <input type="password" placeholder="Confirm Password" class="inputBox cnfPass" required>
                                     <div class="underline"></div>
+                                    <span id="passwordWarning" style="color: red; font-size: 0.8rem;"></span>
                                 </div>
                                 
                                 <input type="submit" name="Sign Up" id="signUp" value="Sign Up" class="default submit">
@@ -84,5 +85,36 @@
     
         </div>
     </div>
+
+    <script>
+        // document.getElementById("signupForm").addEventListener("submit", function(e) {
+        //     e.preventDefault();
+
+        //     var name = document.getElementById("name").value;
+        //     var email = document.getElementById("email").value;
+        //     var phone = document.getElementById("phone").value;
+        //     var password = document.getElementById("password").value;
+
+        //     const details = {
+        //         name: name,
+        //         email: email,
+        //         phone: phone,
+        //         password: password
+        //     };
+        //     module.exports = details;
+        //     console.log(details);
+        // });
+
+        document.getElementById("password").addEventListener("input", function(event) {
+            var password = event.target.value;
+            var passwordWarning = document.getElementById("passwordWarning");
+
+            if (password.length < 6) {
+                passwordWarning.textContent = "Password must be at least 6 characters long";
+            } else {
+                passwordWarning.textContent = "";
+            }
+        });
+    </script>
 </body>
 </html>

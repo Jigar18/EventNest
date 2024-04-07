@@ -14,7 +14,11 @@ router
 
 router
     .route("/sign-up-Student")
-    .get(navigation_controller.signupS);
+    .get(navigation_controller.signupS)
+    .post(express.urlencoded({ extended: true }), (req, res, next) => {
+        navigation_controller.createUser(req.body, res);
+    });
+    // .post(navigation_controller.createUser);
     
 router
     .route("/sign-up-Organization")
@@ -24,4 +28,7 @@ router
     .route("/sign-in")
     .get(navigation_controller.signin);
 
+router
+    .route("/all-events")
+    .get(navigation_controller.allEvent);
 module.exports = router;

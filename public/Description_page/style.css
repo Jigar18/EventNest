@@ -92,13 +92,141 @@ body {
     /* border: 10rem transparent white; */
 }
 
+.organization_info {
+    height: 20rem;
+    width: 155rem;
+    background-color: #a69999;
+    margin-top: 1.5rem;
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.organization {
+    /* background-color: #8a7575; */
+    margin-top: -1rem;
+    height: fit-content;
+    width: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    /* background-color: #F1EEDC; */
+    height: 11rem;
+    width: 11rem;
+}
+
+.logo {
+    box-sizing: border-box;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 50%;
+    background-color: #5b5151;
+    /* border: 0.3rem solid rgb(255, 255, 255); */
+
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    border-radius: 50%;
+}
+
+.basic_info {
+    /* background-color: #E5DDC5; */
+    height: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5rem;
+    gap: 2rem;
+}
+
+.icon_info {
+    height: 2rem;
+    /* background-color: #7f71aa; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_info i {
+    font-size: 2rem;
+    margin-right: 1.1rem;
+}
+
+.icon_info h2 {
+    font-size: 1.8rem;
+}
+
+.icon_info h3 {
+    font-size: 1.8rem;
+}
+
+.buttons {
+    width: 80rem;
+    height: fit-content;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    gap: 1.3rem;
+    /* background-color: #000000; */
+    position: relative;
+    /* left: 9.2rem; */
+    top: 0.9rem;
+}
+
+.favourites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    height: 4.5rem;
+    width: fit-content;
+    font-size: 2.2rem;
+    border: 0.3rem solid rgb(200, 34, 62);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.favourites p {
+    font-size: 1.8rem;
+    margin-left: 0.6rem;
+    font-weight: 500;
+}
+
+.tag {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.2rem;
+    width: 14rem;
+    /* background:linear-gradient(to left ,rgb(192, 60, 82), rgb(192, 192, 52)); */
+    /* background-color: #E5DDC5; */
+    background: rgba(244, 246, 249, 0.7);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    /* border: 0.5rem solid #a72828; */
+    margin-left: 4rem;
+}
+
 .below__cover {
     margin-top: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 2.4fr;
     border-radius: 0.9rem;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     height: 100rem;
+    width: 155rem;
 }
 
 .timeline {
@@ -109,11 +237,7 @@ body {
     background-color: #F1EEDC;
 }
 
-.description {
-    background-color: #E5DDC5;
-    border-radius: 0.9rem;
-    /* border: 0.2rem solid rgb(188, 145, 145); */
-}
+
 
 .heading {
     height: auto;
@@ -210,4 +334,65 @@ body {
     margin-left: 0.8rem;
     font-size: 1.5rem;
     font-weight: 500;
+}
+
+.second_half {
+    background-color: #E5DDC5;
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 0.2rem solid rgb(188, 145, 145); */
+}
+
+.description {
+    width: 95%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+}
+
+.topic {
+    font-size: 2.1rem;
+    /* margin-bottom: -0.2rem; */
+}
+
+.topic_info {
+    font-size: 1.8rem;
+}
+
+.details {
+    width: 95%;
+}
+
+.details_heading {
+    margin-bottom: -1.4rem;
+}
+
+.details_heading h2 {
+    font-size: 2.1rem;
+}
+
+.points {
+    margin-top: -1.3rem;
+}
+
+.details_info {
+    display: flex;
+    align-items: center;
+    height:min-content;
+    margin-bottom: -2rem;
+    /* background-color: #9f97b5; */
+    /* margin-top: 1rem; */
+}
+
+.details_info i {
+    /* background-color: #5c42a4; */
+    margin-right: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.details_info p {
+    /* background-color: #5c42a4; */
+    font-size: 1.8rem;
 }
