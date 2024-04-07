@@ -155,19 +155,19 @@ html {
 }
 
 .bxs-chevron-down {
-    /* display: none; */
-    position: absolute;
-    right: 5.9rem;
+    /* display: none !important; */
+    position: relative;
+    right: -1.9rem;
     background-color: transparent;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
     font-size: 3rem;
     cursor: pointer;
 }
 
 .bxs-chevron-up {
-    display: none;
-    position: absolute;
-    right: 5.9rem;
+    /* display: none !important; */
+    position: relative;
+    right: -1.9rem;
     background-color: transparent;
     font-size: 3rem;
     cursor: pointer;
@@ -182,7 +182,7 @@ html {
 } */
 
 .dropdown-content {
-    display: none;
+    /* display: none; */
     background-color: #bbb9b9;
     border-radius: 1.2rem;
     position: absolute;
