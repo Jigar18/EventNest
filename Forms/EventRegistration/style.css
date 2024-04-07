@@ -11,7 +11,7 @@
     background-image: url(../Assets/Images/container.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
+    background-attachment: fixed;
 
     /* background-color: aquamarine; */
     display: flex;
