@@ -4,27 +4,19 @@ const inputMobile = document.querySelector(".input--mobile");
 let inputGender = document.querySelector('input[name = "Gender"]:checked');
 const options = document.querySelectorAll('.Option');
 const genderOptions = document.querySelectorAll('.genOpt');
+const termsCondModal = document.querySelector('.termsCond');
+const termsCondtext = document.querySelector('.tAndCmodal');
+const closeTermsCondModal = document.querySelector('.close-modal');
+const overlay = document.querySelector('.overlay');
 
-console.log(inputGender);
+console.log(termsCondModal.classList);
+// termsCondModal.classList.add('hidden');
 
-// function optionActive() {
-    
-// }
-
-for(const gender of genderOptions){
-    gender.addEventListener('click', function(){
-        console.log(gender)
-    })
+function toggleHidden(){
+    termsCondModal.classList.toggle('hidden');
+    overlay.classList.toggle('hidden');
 }
 
-// document.querySelectorAll('.genOpt').addEventListener('click', function () {
-//     console.log(inputGender.value);
-// });
+closeTermsCondModal.addEventListener('click',toggleHidden);
+termsCondtext.addEventListener('click', toggleHidden);
 
-// console.log(genderOptions);
-// const  = document.querySelector(".");
-// const  = document.querySelector(".");
-
-// const  = document.querySelector(".");
-// const  = document.querySelector(".");
-// const  = document.querySelector(".");

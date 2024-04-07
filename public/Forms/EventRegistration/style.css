@@ -26,20 +26,21 @@
 }
 
 .imgLogo{
-    width: 250px;
+    width: 45px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 .main{
     width: 1160px;
     /* background-color: rgb(138, 138, 138); */
     box-shadow: 0 45px 45px rgba(0, 0, 0, 0.25);
     background-color: rgba(255, 255, 255, 0.15);
-    padding: 20px;
-    border-radius: 15px;
+    /* padding: 20px; */
+    border-radius: 15px 15px 0px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 0px;
+    margin: 50px 0px 0px 0px;
 }
 
 .mainContent{
@@ -81,7 +82,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
 }
 
 .inputDivLabel{
@@ -165,6 +166,10 @@ form{
     text-align: center;
 }
 
+.checkboxDiv{
+    display: inline;
+}
+
 .btn--submit{
     width: 100px;
     height: 50px;
@@ -187,6 +192,90 @@ form{
     font-size: 18px;
 }
 
+.termsCond{
+    position: fixed;
+    /* position: absolute; */
+    /* postition:fixed; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* text-align: center; */
+    background:linear-gradient(to right, #523f75, #251e3b );
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.tAndCmodal:hover{
+    cursor: pointer;
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+.termsCond ul li{
+    margin-left: 20px;
+}
+
+.close-modal{
+    align-self: flex-end;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.close-modal:hover{
+    cursor: pointer;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 148%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.hidden{
+    display: none;
+}
+
+.footer{
+    width: 100%;
+    /* height: 500px; */
+    /* background-color: #41346a; */
+    text-align: center;
+}
+
+.logo--footer{
+    width: 100%;
+}
+
+.logo--footer img{
+    width: 500px;
+}
+
+.footer--text{
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.copyright p{
+    font-size: 20px;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 @media(max-width: 1250px){
     .main{
         width: 90%;
@@ -200,5 +289,11 @@ form{
     }
     .Option{
         width: 100%;
+    }
+}
+
+@media(max-width: 600px){
+    .logo--footer img{
+        width: 85%
     }
 }
