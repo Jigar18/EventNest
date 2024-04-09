@@ -31,4 +31,15 @@ router
 router
     .route("/all-events")
     .get(navigation_controller.allEvent);
+    
+router
+    .route("/event-desctiption")
+    .get(navigation_controller.description);
+    
+router
+    .route("/registration-form")
+    .get(navigation_controller.eventRegistration)
+    .post(express.urlencoded({ extended: true }), (req, res, next) => {
+        navigation_controller.registerParticipant(req.body, res);
+    });
 module.exports = router;

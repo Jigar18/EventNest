@@ -20,3 +20,20 @@ navigation.addEventListener("mouseover", function(e) {
 navigation.addEventListener("mouseout", function(e) {
     hover(e, 1);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const favouritesButton = document.querySelector(".favourites");
+    const glowIcon = document.querySelector(".glow");
+
+    let isClicked = false;
+
+    favouritesButton.addEventListener("click", function() {
+        if (!isClicked) {
+            glowIcon.style.zIndex = "1";
+            isClicked = true;
+        } else {
+            glowIcon.style.zIndex = "-1";
+            isClicked = false;
+        }
+    });
+});

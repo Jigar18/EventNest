@@ -15,6 +15,8 @@ app.use("/sign-up-Student", express.static(path.join(__dirname, "public", "Forms
 app.use("/sign-up-Organization", express.static(path.join(__dirname, "public", "Forms", "SignUpOrg")));
 app.use("/sign-in", express.static(path.join(__dirname, "public", "Forms", "SignIn")));
 app.use("/all-events", express.static(path.join(__dirname, "public", "after_login")));
+app.use("/event-desctiption", express.static(path.join(__dirname, "public", "Description_page")));
+app.use("/sign-up-Organization", express.static(path.join(__dirname, "public", "Forms", "registration_form")));
 
 app.use(navigationRoutes);
 app.use((req, res, next) => {                               // this is also middleware with different format
