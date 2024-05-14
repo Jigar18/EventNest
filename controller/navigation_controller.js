@@ -4,6 +4,19 @@ const path = require("path");
 const User = require("../models/user_model");
 const Participant = require("../models/registration_model");
 // const bodyParser = require('body-parser');
+let userInfo = [];
+try {
+    userInfo = JSON.parse(fs.readFileSync("./data/userData.json", "utf-8"));
+} catch (err) {
+    console.error("Error reading user data:", err);
+}
+
+let participantInfo = [];
+try {
+    participantInfo = JSON.parse(fs.readFileSync("./data/participantData.json", "utf-8"));
+} catch (err) {
+    console.error("Error reading user data:", err);
+}
 
 const landing_page = fs.readFileSync(`${__dirname}/../public/Landing_Page/index.html`, "utf-8");
 const userT = fs.readFileSync("./public/page-2/index.html", "utf-8");
@@ -50,12 +63,24 @@ exports.createUser = async (formData, res) => {
         };
         const newUser = await User.create(userData);
 
+        userInfo.push(userData);
+        fs.writeFile("./data/userData.json", JSON.stringify(userInfo), err => {         // the JSON.stringify() only this much is written in the json rest is to check in the postman or the client console
+            if (err) {
+                throw err;
+            }
+            res.status(201).json({
+                status: "success",
+                data: {
+                    user: newUser
+                }
+            });
+        });
         res.redirect("/all-events");
     }
     catch(err) {
         res.status(400).json({
             status: "failed",
-            message: err
+            message: err.message
         });
     }
 }
@@ -90,6 +115,19 @@ exports.registerParticipant = async (formData, res) => {
             organization_name
         };
         const newParticipant = await Participant.create(participantData);
+
+        participantInfo.push(participantData);
+        fs.writeFile("./data/participantData.json", JSON.stringify(participantInfo), err => {
+            if (err) {
+                throw err;
+            }
+            res.status(201).json({
+                status: "success",
+                data: {
+                    user: newParticipant
+                }
+            });
+        });
 
         res.redirect("/event-desctiption");
     }
